@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Table - With body only scroll</title>
+    <style>
+      /* table,
+      th,
+      tfoot {
+        border: 1px solid black;
+        border-collapse: collapse;
+        table-layout: fixed;
+        text-align: center;
+      }
+
+      td {
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+      } */
+
+      .wrapper {
+        width: 90%;
+        position: relative;
+        border: 1px solid #000;
+        background: #efefef;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      .container {
+        overflow-y: scroll;
+        height: 200px;
+        border-top: 41px solid transparent;
+        border-bottom: 41px solid transparent;
+      }
+
+      table {
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border-bottom: 1px solid #fff;
+        background: #efefef;
+        padding: 10px;
+      }
+
+      thead tr th,
+      tfoot tr td {
+        height: 0;
+        line-height: 0;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: transparent;
+        border: none;
+        white-space: nowrap;
+      }
+
+      thead tr th div,
+      tfoot tr td div {
+        position: absolute;
+        color: #000;
+        padding: 10px;
+        margin-left: -10px;
+        line-height: normal;
+        width: 100%;
+        z-index: 2;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      thead tr th div {
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+
+      tfoot tr td div {
+        /* border-left: 1px solid #000; */
+        border-top: 1px solid #000;
+      }
+
+      thead tr th div {
+        top: 0;
+      }
+
+      tfoot tr td div {
+        bottom: 0;
+      }
+
+      thead tr th:first-child div,
+      tfoot tr td:first-child div {
+        border-left: none;
+      }
+
+      tfoot > tr > td {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table body scrolling</h1>
+    <div class="wrapper">
+      <div class="container">
+        <table>
+          <thead>
+            <th><div class="c1">Name</div></th>
+            <th><div class="c2">Age</div></th>
+            <th><div class="c3">City</div></th>
+            <th><div>Country</div></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ABC</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>ING</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>XYZ</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>21</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><div class="c1">Total</div></td>
+              <td><div class="c1">Total</div></td>
+              <td><div class="c1">Total</div></td>
+              <td><div class="c1">Total</div></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
